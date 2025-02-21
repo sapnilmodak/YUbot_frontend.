@@ -38,7 +38,7 @@ const Chatbot = () => {
 
       if (!videoLink) {
         // Make a request to the search endpoint with the query
-        const searchResponse = await fetch("http://127.0.0.1:8000/search", {
+        const searchResponse = await fetch("https://backend-fd.onrender.com/search", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query: input }) // Ensure the query is included
@@ -65,7 +65,7 @@ const Chatbot = () => {
       }
 
       // Make a request to the summarize endpoint with the video link
-      const summarizeResponse = await fetch("http://localhost:8000/summarize", {
+      const summarizeResponse = await fetch("https://backend-fd.onrender.com/summarize", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
